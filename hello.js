@@ -1,5 +1,5 @@
 const http = require('http');
-const host = 'localhost';
+const host = 'hassio.local';
 const port = 3000;
 let brightness = 0;
 
