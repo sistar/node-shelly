@@ -18,7 +18,7 @@ const requestListener = function (req, resA) {
             brightness = parseInt(parsed_data['brightness']); 
             console.log('current brightness:' + brightness);  
             brightness = brightness + inc;
-            const qs = 'http://192.168.178.41/light/0?brightness=' + brightness.toString;
+            const qs = 'http://192.168.178.41/light/0?brightness=' + brightness.toString();
             console.log('about to query: ' + qs)
             let request = http.get(qs, (res) => {
                 if (res.statusCode !== 200) {
