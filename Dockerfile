@@ -7,6 +7,8 @@ RUN apk add --no-cache nodejs
 
 # Copy data for add-on
 COPY run.sh /
+COPY hello.js /
+
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
