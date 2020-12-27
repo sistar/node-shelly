@@ -18,7 +18,9 @@ const requestListener = function (req, resA) {
             brightness = parseInt(parsed_data['brightness']); 
             console.log('current brightness:' + brightness);  
             brightness = brightness + inc;
-            let request = http.get('http://192.168.178.41/light/0?brightness=' + brightness.toString, (res) => {
+            const qs = 'http://192.168.178.41/light/0?brightness=' + brightness.toString;
+            console.log('about to query: ' + qs)
+            let request = http.get(qs, (res) => {
                 if (res.statusCode !== 200) {
                     console.error(`Did not get an OK from the server. Code: ${res.statusCode}`);
                     res.resume();
